@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '1.9.3'
+ruby "1.9.3", engine: 'jruby', engine_version: JRUBY_VERSION
 
 gem 'rails', '3.2.13'
 gem 'jquery-rails'
@@ -23,6 +23,7 @@ end
 group :production do
   gem 'pg'
   gem 'memcachier' # memcached
+  gem 'puma'
 end
 
 group :development, :test do
@@ -31,7 +32,6 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'cane'
   gem 'reek'
-  gem 'debugger'
   gem 'capybara'
   gem 'simplecov'
   gem 'quiet_assets'

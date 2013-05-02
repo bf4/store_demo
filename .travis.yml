@@ -1,5 +1,5 @@
 language: ruby
-bundler_args: --without development ruby
+bundler_args: --without development jruby
 rvm:
-  - jruby-19mode
+  - 1.9.3
 script: "bundle exec rake performance:production"

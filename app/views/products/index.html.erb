@@ -1,4 +1,4 @@
-<% cache [@categories, @products, 'products_index'] do %>
+<% cache [*@categories, *@products, 'products_index'].flatten do %>
   <div class="product-index">
     <section class="row">
         <div class="btn-group span1" id="homepage-category-dropdown">
@@ -28,11 +28,13 @@
 
     <br/>
 
-    <% cache [@products, 'product_index'] do %>
+    <% cache [*@products, 'product_index'].flatten do %>
       <div id="product_listing" class="row-fluid">
         <%= render @products %>
       </div>
+    <% end %>
 
+    <% cache [*@products, 'paginated_product_index'].flatten do %>
       <%= will_paginate @products %>
     <% end %>
 

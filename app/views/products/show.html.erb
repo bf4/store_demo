@@ -1,4 +1,4 @@
-<% cache [@product, 'show'] do %>
+<% cache [*@product, *@ratings, 'show'].flatten do %>
   <div class="row">
     <div class="prod_detail_img span6">
       <p><%= image_tag @product.image_path %></p>

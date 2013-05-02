@@ -21,9 +21,10 @@ group :assets do
 end
 
 group :production do
-  if defined?(JRUBY_VERSION)
+  platforms :jruby do
     gem 'activerecord-jdbcpostgresql-adapter'
-  else
+  end
+  platforms :ruby do
     gem 'pg'
   end
   gem 'memcachier' # memcached
@@ -32,7 +33,9 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'sqlite3'
+  platforms :ruby do
+    gem 'sqlite3'
+  end
   gem 'factory_girl_rails'
   gem 'cane'
   gem 'reek'

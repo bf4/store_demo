@@ -39,6 +39,9 @@ group :development, :test do
     gem 'cane'
     gem 'reek'
   end
+  platforms :jruby do
+    gem 'jdbc-sqlite3', require: 'jdbc/sqlite3'
+  end
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'quiet_assets'

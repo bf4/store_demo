@@ -100,6 +100,7 @@ GEM
     httpauth (0.2.0)
     i18n (0.6.1)
     jdbc-postgres (9.2.1002.1)
+    jdbc-sqlite3 (3.7.2.1)
     journey (1.0.4)
     jquery-rails (2.2.1)
       railties (>= 3.0, < 5.0)
@@ -265,6 +266,7 @@ DEPENDENCIES
   factory_girl_rails
   faker
   guard-rspec
+  jdbc-sqlite3
   jquery-rails
   launchy
   memcachier

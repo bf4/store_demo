@@ -35,12 +35,12 @@ group :development, :test do
   gem 'rspec-rails'
   platforms :ruby do
     gem 'sqlite3'
+    gem 'simplecov'
+    gem 'cane'
+    gem 'reek'
   end
   gem 'factory_girl_rails'
-  gem 'cane'
-  gem 'reek'
   gem 'capybara'
-  gem 'simplecov'
   gem 'quiet_assets'
   gem 'poltergeist'
 end

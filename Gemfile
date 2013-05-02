@@ -22,6 +22,7 @@ end
 
 group :production do
   gem 'pg'
+  gem 'memcachier' # memcached
 end
 
 group :development, :test do

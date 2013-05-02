@@ -114,6 +114,7 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    memcachier (0.0.2)
     method_source (0.8.1)
     mime-types (1.23)
     multi_json (1.7.2)
@@ -248,6 +249,7 @@ DEPENDENCIES
   guard-rspec
   jquery-rails
   launchy
+  memcachier
   newrelic_rpm
   pg
   poltergeist

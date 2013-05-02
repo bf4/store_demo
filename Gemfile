@@ -21,7 +21,11 @@ group :assets do
 end
 
 group :production do
-  gem 'pg'
+  if defined?(JRUBY_VERSION)
+    gem 'activerecord-jdbcpostgresql-adapter'
+  else
+    gem 'pg'
+  end
   gem 'memcachier' # memcached
   gem 'puma'
 end

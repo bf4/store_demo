@@ -1,7 +1,10 @@
 class ProductsController < ApplicationController
+  def self.all_categories
+    @all_categories ||= Category.all
+  end
   def index
     @products = Search.filter_products(params)
-    @categories = Category.all
+    @categories = self.class.all_categories
   end
 
   def show

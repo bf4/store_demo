@@ -13,7 +13,7 @@ test:
   username: monster
 
 production:
-  adapter: postgresql
+  adapter: jdbcpostgresql
   encoding: utf8
   database: monster_production
   pool: 5

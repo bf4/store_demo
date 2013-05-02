@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby "1.9.3", engine: 'jruby', engine_version: JRUBY_VERSION
+ruby "1.9.3", engine: 'jruby', engine_version: defined?(JRUBY_VERSION) ? JRUBY_VERSION : '1.7.1'
 
 gem 'rails', '3.2.13'
 gem 'jquery-rails'

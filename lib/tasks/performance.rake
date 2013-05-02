@@ -51,6 +51,9 @@ namespace :performance do
   desc "Run the performance suite against production"
   task :production => :environment do
     ENV['PERFORMANCE_ROOT'] = StoreConfig.production_url
+    puts "Priming the app"
+    run_performance_tests
+    puts "Running the tests for realz"
     submit_runtime run_performance_tests
   end
 end
